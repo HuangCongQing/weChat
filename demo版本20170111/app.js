@@ -1,8 +1,9 @@
 const openIdUrl = require('./config').openIdUrl
 
 App({
-  onLaunch: function () {
-    console.log('App Launch')
+  onLaunch: function (scene) {
+    console.log('App Launch   场景值')
+    console.log(scene)
   },
   onShow: function () {
     console.log('App Show')

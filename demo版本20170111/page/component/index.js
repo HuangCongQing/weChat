@@ -38,6 +38,8 @@ Page({
     ]
   },
   kindToggle: function (e) {
+    console.log("index data")
+    console.log(this)
     var id = e.currentTarget.id, list = this.data.list;
     for (var i = 0, len = list.length; i < len; ++i) {
       if (list[i].id == id) {
@@ -49,6 +51,19 @@ Page({
     this.setData({
       list: list
     });
+  },
+  // 设置分享
+  onShareAppMessage: function () {
+    var sharetitle,
+      tid = this.data.tid,
+      m = this.data.m,
+      flag = this.data.lastflag,
+      title = this.data.sharetitle;
+    return {
+      title: flag == true ? title : '默认title',
+      desc: '分享描述，一句话。',
+      path: '/page/component/index?tid=' + tid + '&m=' + m
+    }
   }
 })
 
