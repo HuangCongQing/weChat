@@ -1,0 +1,10 @@
+<!--pages/getData/getData.wxml-->
+<text>pages/getData/getData.wxml</text>
+<button bindtap="getData">点击获取数据</button>
+<view class="date">{{date}}</view>
+  <block wx:for-items="{{stories}}" >
+    <view class="classname">
+      <view class="{{item.id}}" style="border: 1px solid #ff0000">{{item.title}}</view>
+      <image src="{{item.images[0]}}"></image>
+    </view>
+  </block> 

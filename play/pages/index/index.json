@@ -1,4 +1,7 @@
 {
    "navigationBarTitleText": "黄重庆首页" ,
-   "backgroundColor": "#f53b3b"
+   "navigationBarBackgroundColor": "#00ff00",
+   "backgroundTextStyle":"dark",
+   "backgroundColor": "#f53b3b",
+   "backgroundTextStyle": "true"
 }

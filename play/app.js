@@ -10,9 +10,14 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
   },
+  onShow: function (option) {
+    console.log("onShow中的各个参数",option)
+
+  },
   //全局的方法
   getUserInfo:function(cb){
     var that = this
+    console.log("全局方法中的this,this,this",this)
     if(this.globalData.userInfo){
       typeof cb == "function" && cb(this.globalData.userInfo)
     }else{
@@ -31,6 +36,6 @@ App({
   },
   //全局的属性
   globalData:{
-    userInfo:null
+    userInfo:null,
   }
 })
