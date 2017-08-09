@@ -4,6 +4,13 @@ var app = getApp()
 console.log("getapp里的内容", app)
 Page({
   data: {
+// 模块所需要的data
+    item: {
+      index: 0,
+      msg: 'this is a template',
+      time: '2017-08-09'
+    },
+    // 以下
     motto: 'Hello 黄重庆,这是传的参',
     userInfo: {},
     list: [

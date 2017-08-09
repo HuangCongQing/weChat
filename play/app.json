@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/getData/getData",
     "pages/logs/logs",
-    "pages/calendar/calendar"
+    "pages/calendar/calendar",
+    "pages/API/template0/template0"
   ],
   "window":{
     "backgroundTextStyle":"#00ff00",

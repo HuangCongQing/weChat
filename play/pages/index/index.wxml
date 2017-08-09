@@ -1,11 +1,20 @@
 <!--index.wxml-->
+<!-- 引入模块 -->
+<import src="../API/template0/template0"/>
+
+
 <view class="container">
 <!--bindTap轻敲事件-->
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
-  <block wx:for-items="{{list}}" >
+  <!-- 模块组件 -->
+  <navigator url="../API/template0/template0" hover-class="color: #ff0000">
+    <view class="classname" >点击template0</view>
+  </navigator>
+  <template is="msgItem" data="{{...item}}" />
+  <!-- <block wx:for-items="{{list}}" >
     <view class="classname" style="display:flex;align-items:center;line-height:20px;justify-content: space-between">
       <view class="{{item.id}}">{{item.name}}</view>
       <view class="{{item.id}}">{{item.id}}</view>  
@@ -13,5 +22,5 @@
   </block> 
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
+  </view> -->
 </view>
